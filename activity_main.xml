@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✦  DAILY INSPIRATION"
+                android:textColor="@color/warm_brown"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quote of the Day"
+                android:textColor="@color/dark_text"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a little inspiration, freshly bound"
+                android:textColor="@color/soft_text"
+                android:textSize="15sp"
+                android:layout_marginTop="6dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/quoteCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/blush_pink">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="“"
+                        android:textColor="@color/warm_brown"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:id="@+id/quoteText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="A reader lives a thousand lives before he dies."
+                        android:textColor="@color/dark_text"
+                        android:textSize="22sp"
+                        android:lineSpacingExtra="5dp"
+                        android:fontFamily="serif" />
+
+                    <View
+                        android:layout_width="45dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/warm_brown" />
+
+                    <TextView
+                        android:id="@+id/authorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="— George R.R. Martin"
+                        android:textColor="@color/warm_brown"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:layout_marginTop="12dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Take a moment. Read it. Let it stay with you. ♡"
+                android:textColor="@color/soft_text"
+                android:textSize="13sp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
+
+            <Button
+                android:id="@+id/newQuoteButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="✦  New Quote"
+                android:textAllCaps="false"
+                android:textColor="@color/cream_background"
+                android:textSize="16sp"
+                android:backgroundTint="@color/dark_text"
+                android:layout_marginTop="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/favoriteButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="♡  Favorite"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_text"
+                    android:backgroundTint="@color/peach"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/shareButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="↗  Share"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_text"
+                    android:backgroundTint="@color/lavender"
+                    android:layout_marginStart="6dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/cream_background">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="⌂  Today"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_text"
+            android:backgroundTint="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/favoritesButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="♥  Favorites"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_text"
+            android:backgroundTint="@android:color/transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>
